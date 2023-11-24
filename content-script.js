@@ -34,7 +34,7 @@ var startElement = document.querySelector(".features");
 
 if (startElement) {
   // Define the styles you want to filter
-  var styleFilter = ["color", "font-size", "border"];
+  var styleFilter = ["flex", "color", "font-size", "border"];
 
   // Build the tree starting from the specified element with filtered styles
   var domTree = buildTree(startElement, styleFilter);
