@@ -1,9 +1,10 @@
 // Function to recursively build a tree from DOM elements
 function buildTree(element, styleFilter) {
   var node = {
-    tagName: element.tagName,
-    coordinates: element.getBoundingClientRect(),
+    type: element.tagName,
+    visible: true,
     classes: element.classList.value,
+    coordinates: element.getBoundingClientRect(),
     styles: getFilteredStyles(element, styleFilter),
     insideText: element.textContent.trim(),
     existInsideText: Boolean(element.textContent.trim().length),
