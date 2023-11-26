@@ -7,7 +7,7 @@ function buildTree(element, styleFilter) {
     coordinates: element.getBoundingClientRect(),
     styles: getFilteredStyles(element, styleFilter),
     insideText: element.textContent.trim(),
-    iAMText: Boolean(element.textContent.trim().length),
+    childrensORIHaveTextInside: Boolean(element.textContent.trim().length),
     children: [],
   };
 
