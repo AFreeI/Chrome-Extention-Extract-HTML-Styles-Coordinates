@@ -7,7 +7,7 @@ function buildTree(element, styleFilter) {
     coordinates: element.getBoundingClientRect(),
     styles: getFilteredStyles(element, styleFilter),
     insideText: element.textContent.trim(),
-    existInsideText: Boolean(element.textContent.trim().length),
+    iAMText: Boolean(element.textContent.trim().length),
     children: [],
   };
 
@@ -34,7 +34,7 @@ function getFilteredStyles(element, styleFilter) {
 }
 
 // Find the starting element by class (you can use getElementById for IDs)
-var startElement = document.querySelector(".creativity");
+var startElement = document.querySelector(".link-btn");
 
 if (startElement) {
   // Define the styles you want to filter
