@@ -1,5 +1,5 @@
 // Function to recursively build a tree from DOM elements
-function buildTree(element, styleFilter) {
+function buildTree(element, styleFilter, parent = null) {
   var node = {
     type: element.tagName,
     visible: true,
@@ -13,7 +13,7 @@ function buildTree(element, styleFilter) {
 
   // Recursively build the tree for each child node
   for (var i = 0; i < element.children.length; i++) {
-    node.children.push(buildTree(element.children[i], styleFilter));
+    node.children.push(buildTree(element.children[i], styleFilter, node)); // Pass current node as the parent
   }
 
   return node;
@@ -34,7 +34,7 @@ function getFilteredStyles(element, styleFilter) {
 }
 
 // Find the starting element by class (you can use getElementById for IDs)
-var startElement = document.querySelector(".link-btn");
+var startElement = document.querySelector(".hero-wrap");
 
 if (startElement) {
   // Define the styles you want to filter
