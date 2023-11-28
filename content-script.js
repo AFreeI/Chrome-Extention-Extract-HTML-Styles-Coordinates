@@ -38,7 +38,25 @@ var startElement = document.querySelector(".hero-wrap");
 
 if (startElement) {
   // Define the styles you want to filter
-  var styleFilter = ["display", "flex", "color", "font-size", "border"];
+  var styleFilter = [
+    "display",
+    "flex",
+    "color",
+    "font-size",
+    "border",
+    "borderTopWidth",
+    "borderBottomWidth",
+    "borderRightWidth",
+    "borderLeftWidth",
+    "borderTopStyle",
+    "borderBottomStyle",
+    "borderRightStyle",
+    "borderLeftStyle",
+    "borderTopColor",
+    "borderBottomColor",
+    "borderRightColor",
+    "borderLeftColor",
+  ];
 
   // Build the tree starting from the specified element with filtered styles
   var domTree = buildTree(startElement, styleFilter);
@@ -48,6 +66,7 @@ if (startElement) {
 } else {
   console.log('Element with class "start-from-here" not found.');
 }
+/**/
 
 /* Without Filter */
 /*
@@ -80,4 +99,4 @@ if (startElement) {
 } else {
   console.log('Element with class "features" not found.');
 }
-*/
+/**/
