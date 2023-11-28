@@ -34,7 +34,7 @@ function getFilteredStyles(element, styleFilter) {
 }
 
 // Find the starting element by class (you can use getElementById for IDs)
-var startElement = document.querySelector(".hero-wrap");
+var startElement = document.querySelector(".features");
 
 if (startElement) {
   // Define the styles you want to filter
