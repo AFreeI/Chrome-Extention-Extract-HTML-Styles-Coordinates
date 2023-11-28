@@ -34,7 +34,7 @@ function getFilteredStyles(element, styleFilter) {
 }
 
 // Find the starting element by class (you can use getElementById for IDs)
-var startElement = document.querySelector(".features");
+var startElement = document.querySelector(".feature-block");
 
 if (startElement) {
   // Define the styles you want to filter
@@ -56,6 +56,11 @@ if (startElement) {
     "borderBottomColor",
     "borderRightColor",
     "borderLeftColor",
+    "padding",
+    "paddingTop",
+    "paddingBottom",
+    "paddingRight",
+    "paddingLeft",
   ];
 
   // Build the tree starting from the specified element with filtered styles
