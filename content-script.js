@@ -1,14 +1,23 @@
 /* */
+
+// Initialize a counter for generating unique IDs
+let nodeIdCounter = 0;
+
 // Function to recursively build a tree from DOM elements
 function buildTree(element, styleFilter, parent = null) {
+  // Increment the counter to get a unique ID
+  const nodeId = nodeIdCounter++;
+
   var node = {
+    id: "id" + nodeId,
     type: element.tagName,
     visible: true,
     classes: element.classList.value,
     coordinates: element.getBoundingClientRect(),
     styles: getFilteredStyles(element, styleFilter),
     insideText: element.textContent.trim(),
-    childrensORIHaveTextInside: Boolean(element.textContent.trim().length),
+    iAMText:
+      element.childNodes.length === 1 && element.childNodes[0].nodeType === 3,
     children: [],
   };
 
@@ -35,36 +44,1305 @@ function getFilteredStyles(element, styleFilter) {
 }
 
 // Find the starting element by class (you can use getElementById for IDs)
-var startElement = document.querySelector(".hero");
+
+// Cortex
+
+// var startElement = document.querySelector(".ft-contact-link"); // https://i.imgur.com/H6JPKZZ.png
+
+// var startElement = document.querySelector(".header-btn.white"); // https://i.imgur.com/XEkMCWo.png
+
+//var startElement = document.querySelector(".primary-btn.hero.w-inline-block"); // https://i.imgur.com/X41kDyf.png
+
+//var startElement = document.querySelector(".ft-btn.w-inline-block"); // https://i.imgur.com/X41kDyf.png
+
+//var startElement = document.querySelector(".ft-contact-link"); // https://i.imgur.com/X41kDyf.png
+
+//var startElement = document.querySelector(".header-btn.white"); // https://i.imgur.com/X41kDyf.png
+
+// Toolset.com
+
+//var startElement = document.querySelector(".tb-container-inner .tb-button__link"); // https://i.imgur.com/X41kDyf.png
+
+// WebFlow
+
+//var startElement = document.querySelector(".button-large.cc-open-template.w-inline-block"); // https://i.imgur.com/X41kDyf.png
+
+//var startElement = document.querySelector(".button.w-inline-block"); // https://i.imgur.com/X41kDyf.png
+
+//var startElement = document.querySelector(".g-footer-list_item-link.cc-combo.w-inline-block"); // https://i.imgur.com/AyHngtV.png
+
+var startElement = document.querySelector(
+  ".s_content-w.is--enterprise .button.w-inline-block"
+); // https://i.imgur.com/X41kDyf.png
+
+// DigitalOcean
+
+//var startElement = document.querySelector(".LazyLink___StyledA-sc-yi29t7-1.lcZGRo.SignupButtons___StyledLazyLink-sc-1j4c66p-0.bcRgSa"); // https://i.imgur.com/X41kDyf.png
+
+//var startElement = document.querySelector(".CardPricingstyles__StyledCardPricingContainer-sc-1c4kjfb-0.bcvcMA.pricing__StyledCardPricing-sc-6rgcvr-1.bnCyYu .LinkTextstyles-sc-jz3jcd-0.ftQMfF"); // https://i.imgur.com/X41kDyf.png
+
+// Shopify
+
+//var startElement = document.querySelector(".group.inline-block.w-full.text-white"); // https://i.imgur.com/u6Ewn4k.png
+
+///////////////////////////////////////////////////////////
+// Button GROUP
+///////////////////////////////////////////////////////////
+
+//var startElement = document.querySelector(".hero-btn-wrap"); // https://i.imgur.com/4RSta5G.png
+
+///////////////////////////////////////////////////////////
+// HERO
+///////////////////////////////////////////////////////////
+
+//var startElement = document.querySelector(".hero > .w-layout-blockcontainer.container.w-container"); // https://i.imgur.com/4RSta5G.png
+
+///////////////////////////////////////////////////////////
+// LOGOS
+///////////////////////////////////////////////////////////
+
+//var startElement = document.querySelector(".logo-scroll"); // https://i.imgur.com/clZRVwZ.png
+
+///////////////////////////////////////////////////////////
+// Header
+///////////////////////////////////////////////////////////
+
+//var startElement = document.querySelector(".header.white"); // https://i.imgur.com/7S6biJ8.png
+
+///////////////////////////////////////////////////////////
+// ... //
+///////////////////////////////////////////////////////////
+
+//var startElement = document.querySelector("[data-cta-position='footer hero']");
 
 if (startElement) {
   // Define the styles you want to filter
   var styleFilter = [
-    "display",
-    "flex",
-    "flex-direction",
-    "color",
-    "font-size",
-    "border",
-    "borderTopWidth",
-    "borderBottomWidth",
-    "borderRightWidth",
-    "borderLeftWidth",
-    "borderTopStyle",
-    "borderBottomStyle",
-    "borderRightStyle",
-    "borderLeftStyle",
-    "borderTopColor",
-    "borderBottomColor",
-    "borderRightColor",
-    "borderLeftColor",
-    "padding",
-    "paddingTop",
-    "paddingBottom",
-    "paddingRight",
-    "paddingLeft",
+    "accentColor",
+
+    "additiveSymbols",
+
+    "alignContent",
+
+    "alignItems",
+
+    "alignSelf",
+
+    "alignmentBaseline",
+
+    "all",
+
+    "animation",
+
+    "animationComposition",
+
+    "animationDelay",
+
+    "animationDirection",
+
+    "animationDuration",
+
+    "animationFillMode",
+
+    "animationIterationCount",
+
+    "animationName",
+
+    "animationPlayState",
+
+    "animationRange",
+
+    "animationRangeEnd",
+
+    "animationRangeStart",
+
+    "animationTimeline",
+
+    "animationTimingFunction",
+
+    "appRegion",
+
+    "appearance",
+
+    "ascentOverride",
+
+    "aspectRatio",
+
+    "backdropFilter",
+
+    "backfaceVisibility",
+
+    "background",
+
+    "backgroundAttachment",
+
+    "backgroundBlendMode",
+
+    "backgroundClip",
+
     "backgroundColor",
+
     "backgroundImage",
+
+    "backgroundOrigin",
+
+    "backgroundPosition",
+
+    "backgroundPositionX",
+
+    "backgroundPositionY",
+
+    "backgroundRepeat",
+
+    "backgroundRepeatX",
+
+    "backgroundRepeatY",
+
+    "backgroundSize",
+
+    "basePalette",
+
+    "baselineShift",
+
+    "baselineSource",
+
+    "blockSize",
+
+    "border",
+
+    "borderBlock",
+
+    "borderBlockColor",
+
+    "borderBlockEnd",
+
+    "borderBlockEndColor",
+
+    "borderBlockEndStyle",
+
+    "borderBlockEndWidth",
+
+    "borderBlockStart",
+
+    "borderBlockStartColor",
+
+    "borderBlockStartStyle",
+
+    "borderBlockStartWidth",
+
+    "borderBlockStyle",
+
+    "borderBlockWidth",
+
+    "borderBottom",
+
+    "borderBottomColor",
+
+    "borderBottomLeftRadius",
+
+    "borderBottomRightRadius",
+
+    "borderBottomStyle",
+
+    "borderBottomWidth",
+
+    "borderCollapse",
+
+    "borderColor",
+
+    "borderEndEndRadius",
+
+    "borderEndStartRadius",
+
+    "borderImage",
+
+    "borderImageOutset",
+
+    "borderImageRepeat",
+
+    "borderImageSlice",
+
+    "borderImageSource",
+
+    "borderImageWidth",
+
+    "borderInline",
+
+    "borderInlineColor",
+
+    "borderInlineEnd",
+
+    "borderInlineEndColor",
+
+    "borderInlineEndStyle",
+
+    "borderInlineEndWidth",
+
+    "borderInlineStart",
+
+    "borderInlineStartColor",
+
+    "borderInlineStartStyle",
+
+    "borderInlineStartWidth",
+
+    "borderInlineStyle",
+
+    "borderInlineWidth",
+
+    "borderLeft",
+
+    "borderLeftColor",
+
+    "borderLeftStyle",
+
+    "borderLeftWidth",
+
+    "borderRadius",
+
+    "borderRight",
+
+    "borderRightColor",
+
+    "borderRightStyle",
+
+    "borderRightWidth",
+
+    "borderSpacing",
+
+    "borderStartEndRadius",
+
+    "borderStartStartRadius",
+
+    "borderStyle",
+
+    "borderTop",
+
+    "borderTopColor",
+
+    "borderTopLeftRadius",
+
+    "borderTopRightRadius",
+
+    "borderTopStyle",
+
+    "borderTopWidth",
+
+    "borderWidth",
+
+    "bottom",
+
+    "boxShadow",
+
+    "boxSizing",
+
+    "breakAfter",
+
+    "breakBefore",
+
+    "breakInside",
+
+    "bufferedRendering",
+
+    "captionSide",
+
+    "caretColor",
+
+    "clear",
+
+    "clip",
+
+    "clipPath",
+
+    "clipRule",
+
+    "color",
+
+    "colorInterpolation",
+
+    "colorInterpolationFilters",
+
+    "colorRendering",
+
+    "colorScheme",
+
+    "columnCount",
+
+    "columnFill",
+
+    "columnGap",
+
+    "columnRule",
+
+    "columnRuleColor",
+
+    "columnRuleStyle",
+
+    "columnRuleWidth",
+
+    "columnSpan",
+
+    "columnWidth",
+
+    "columns",
+
+    "contain",
+
+    "containIntrinsicBlockSize",
+
+    "containIntrinsicHeight",
+
+    "containIntrinsicInlineSize",
+
+    "containIntrinsicSize",
+
+    "containIntrinsicWidth",
+
+    "container",
+
+    "containerName",
+
+    "containerType",
+
+    "content",
+
+    "contentVisibility",
+
+    "counterIncrement",
+
+    "counterReset",
+
+    "counterSet",
+
+    "cursor",
+
+    "cx",
+
+    "cy",
+
+    "d",
+
+    "descentOverride",
+
+    "direction",
+
+    "display",
+
+    "dominantBaseline",
+
+    "emptyCells",
+
+    "fallback",
+
+    "fill",
+
+    "fillOpacity",
+
+    "fillRule",
+
+    "filter",
+
+    "flex",
+
+    "flexBasis",
+
+    "flexDirection",
+
+    "flexFlow",
+
+    "flexGrow",
+
+    "flexShrink",
+
+    "flexWrap",
+
+    "float",
+
+    "floodColor",
+
+    "floodOpacity",
+
+    "font",
+
+    "fontDisplay",
+
+    "fontFamily",
+
+    "fontFeatureSettings",
+
+    "fontKerning",
+
+    "fontOpticalSizing",
+
+    "fontPalette",
+
+    "fontSize",
+
+    "fontStretch",
+
+    "fontStyle",
+
+    "fontSynthesis",
+
+    "fontSynthesisSmallCaps",
+
+    "fontSynthesisStyle",
+
+    "fontSynthesisWeight",
+
+    "fontVariant",
+
+    "fontVariantAlternates",
+
+    "fontVariantCaps",
+
+    "fontVariantEastAsian",
+
+    "fontVariantLigatures",
+
+    "fontVariantNumeric",
+
+    "fontVariantPosition",
+
+    "fontVariationSettings",
+
+    "fontWeight",
+
+    "forcedColorAdjust",
+
+    "gap",
+
+    "grid",
+
+    "gridArea",
+
+    "gridAutoColumns",
+
+    "gridAutoFlow",
+
+    "gridAutoRows",
+
+    "gridColumn",
+
+    "gridColumnEnd",
+
+    "gridColumnGap",
+
+    "gridColumnStart",
+
+    "gridGap",
+
+    "gridRow",
+
+    "gridRowEnd",
+
+    "gridRowGap",
+
+    "gridRowStart",
+
+    "gridTemplate",
+
+    "gridTemplateAreas",
+
+    "gridTemplateColumns",
+
+    "gridTemplateRows",
+
+    "height",
+
+    "hyphenateCharacter",
+
+    "hyphenateLimitChars",
+
+    "hyphens",
+
+    "imageOrientation",
+
+    "imageRendering",
+
+    "inherits",
+
+    "initialLetter",
+
+    "initialValue",
+
+    "inlineSize",
+
+    "inset",
+
+    "insetBlock",
+
+    "insetBlockEnd",
+
+    "insetBlockStart",
+
+    "insetInline",
+
+    "insetInlineEnd",
+
+    "insetInlineStart",
+
+    "isolation",
+
+    "justifyContent",
+
+    "justifyItems",
+
+    "justifySelf",
+
+    "left",
+
+    "letterSpacing",
+
+    "lightingColor",
+
+    "lineBreak",
+
+    "lineGapOverride",
+
+    "lineHeight",
+
+    "listStyle",
+
+    "listStyleImage",
+
+    "listStylePosition",
+
+    "listStyleType",
+
+    "margin",
+
+    "marginBlock",
+
+    "marginBlockEnd",
+
+    "marginBlockStart",
+
+    "marginBottom",
+
+    "marginInline",
+
+    "marginInlineEnd",
+
+    "marginInlineStart",
+
+    "marginLeft",
+
+    "marginRight",
+
+    "marginTop",
+
+    "marker",
+
+    "markerEnd",
+
+    "markerMid",
+
+    "markerStart",
+
+    "mask",
+
+    "maskType",
+
+    "mathDepth",
+
+    "mathShift",
+
+    "mathStyle",
+
+    "maxBlockSize",
+
+    "maxHeight",
+
+    "maxInlineSize",
+
+    "maxWidth",
+
+    "minBlockSize",
+
+    "minHeight",
+
+    "minInlineSize",
+
+    "minWidth",
+
+    "mixBlendMode",
+
+    "negative",
+
+    "objectFit",
+
+    "objectPosition",
+
+    "objectViewBox",
+
+    "offset",
+
+    "offsetAnchor",
+
+    "offsetDistance",
+
+    "offsetPath",
+
+    "offsetPosition",
+
+    "offsetRotate",
+
+    "opacity",
+
+    "order",
+
+    "orphans",
+
+    "outline",
+
+    "outlineColor",
+
+    "outlineOffset",
+
+    "outlineStyle",
+
+    "outlineWidth",
+
+    "overflow",
+
+    "overflowAnchor",
+
+    "overflowClipMargin",
+
+    "overflowWrap",
+
+    "overflowX",
+
+    "overflowY",
+
+    "overlay",
+
+    "overrideColors",
+
+    "overscrollBehavior",
+
+    "overscrollBehaviorBlock",
+
+    "overscrollBehaviorInline",
+
+    "overscrollBehaviorX",
+
+    "overscrollBehaviorY",
+
+    "pad",
+
+    "padding",
+
+    "paddingBlock",
+
+    "paddingBlockEnd",
+
+    "paddingBlockStart",
+
+    "paddingBottom",
+
+    "paddingInline",
+
+    "paddingInlineEnd",
+
+    "paddingInlineStart",
+
+    "paddingLeft",
+
+    "paddingRight",
+
+    "paddingTop",
+
+    "page",
+
+    "pageBreakAfter",
+
+    "pageBreakBefore",
+
+    "pageBreakInside",
+
+    "pageOrientation",
+
+    "paintOrder",
+
+    "perspective",
+
+    "perspectiveOrigin",
+
+    "placeContent",
+
+    "placeItems",
+
+    "placeSelf",
+
+    "pointerEvents",
+
+    "position",
+
+    "prefix",
+
+    "quotes",
+
+    "r",
+
+    "range",
+
+    "resize",
+
+    "right",
+
+    "rotate",
+
+    "rowGap",
+
+    "rubyPosition",
+
+    "rx",
+
+    "ry",
+
+    "scale",
+
+    "scrollBehavior",
+
+    "scrollMargin",
+
+    "scrollMarginBlock",
+
+    "scrollMarginBlockEnd",
+
+    "scrollMarginBlockStart",
+
+    "scrollMarginBottom",
+
+    "scrollMarginInline",
+
+    "scrollMarginInlineEnd",
+
+    "scrollMarginInlineStart",
+
+    "scrollMarginLeft",
+
+    "scrollMarginRight",
+
+    "scrollMarginTop",
+
+    "scrollPadding",
+
+    "scrollPaddingBlock",
+
+    "scrollPaddingBlockEnd",
+
+    "scrollPaddingBlockStart",
+
+    "scrollPaddingBottom",
+
+    "scrollPaddingInline",
+
+    "scrollPaddingInlineEnd",
+
+    "scrollPaddingInlineStart",
+
+    "scrollPaddingLeft",
+
+    "scrollPaddingRight",
+
+    "scrollPaddingTop",
+
+    "scrollSnapAlign",
+
+    "scrollSnapStop",
+
+    "scrollSnapType",
+
+    "scrollTimeline",
+
+    "scrollTimelineAxis",
+
+    "scrollTimelineName",
+
+    "scrollbarGutter",
+
+    "shapeImageThreshold",
+
+    "shapeMargin",
+
+    "shapeOutside",
+
+    "shapeRendering",
+
+    "size",
+
+    "sizeAdjust",
+
+    "speak",
+
+    "speakAs",
+
+    "src",
+
+    "stopColor",
+
+    "stopOpacity",
+
+    "stroke",
+
+    "strokeDasharray",
+
+    "strokeDashoffset",
+
+    "strokeLinecap",
+
+    "strokeLinejoin",
+
+    "strokeMiterlimit",
+
+    "strokeOpacity",
+
+    "strokeWidth",
+
+    "suffix",
+
+    "symbols",
+
+    "syntax",
+
+    "system",
+
+    "tabSize",
+
+    "tableLayout",
+
+    "textAlign",
+
+    "textAlignLast",
+
+    "textAnchor",
+
+    "textCombineUpright",
+
+    "textDecoration",
+
+    "textDecorationColor",
+
+    "textDecorationLine",
+
+    "textDecorationSkipInk",
+
+    "textDecorationStyle",
+
+    "textDecorationThickness",
+
+    "textEmphasis",
+
+    "textEmphasisColor",
+
+    "textEmphasisPosition",
+
+    "textEmphasisStyle",
+
+    "textIndent",
+
+    "textOrientation",
+
+    "textOverflow",
+
+    "textRendering",
+
+    "textShadow",
+
+    "textSizeAdjust",
+
+    "textTransform",
+
+    "textUnderlineOffset",
+
+    "textUnderlinePosition",
+
+    "textWrap",
+
+    "timelineScope",
+
+    "top",
+
+    "touchAction",
+
+    "transform",
+
+    "transformBox",
+
+    "transformOrigin",
+
+    "transformStyle",
+
+    "transition",
+
+    "transitionBehavior",
+
+    "transitionDelay",
+
+    "transitionDuration",
+
+    "transitionProperty",
+
+    "transitionTimingFunction",
+
+    "translate",
+
+    "unicodeBidi",
+
+    "unicodeRange",
+
+    "userSelect",
+
+    "vectorEffect",
+
+    "verticalAlign",
+
+    "viewTimeline",
+
+    "viewTimelineAxis",
+
+    "viewTimelineInset",
+
+    "viewTimelineName",
+
+    "viewTransitionName",
+
+    "visibility",
+
+    "webkitAlignContent",
+
+    "webkitAlignItems",
+
+    "webkitAlignSelf",
+
+    "webkitAnimation",
+
+    "webkitAnimationDelay",
+
+    "webkitAnimationDirection",
+
+    "webkitAnimationDuration",
+
+    "webkitAnimationFillMode",
+
+    "webkitAnimationIterationCount",
+
+    "webkitAnimationName",
+
+    "webkitAnimationPlayState",
+
+    "webkitAnimationTimingFunction",
+
+    "webkitAppRegion",
+
+    "webkitAppearance",
+
+    "webkitBackfaceVisibility",
+
+    "webkitBackgroundClip",
+
+    "webkitBackgroundOrigin",
+
+    "webkitBackgroundSize",
+
+    "webkitBorderAfter",
+
+    "webkitBorderAfterColor",
+
+    "webkitBorderAfterStyle",
+
+    "webkitBorderAfterWidth",
+
+    "webkitBorderBefore",
+
+    "webkitBorderBeforeColor",
+
+    "webkitBorderBeforeStyle",
+
+    "webkitBorderBeforeWidth",
+
+    "webkitBorderBottomLeftRadius",
+
+    "webkitBorderBottomRightRadius",
+
+    "webkitBorderEnd",
+
+    "webkitBorderEndColor",
+
+    "webkitBorderEndStyle",
+
+    "webkitBorderEndWidth",
+
+    "webkitBorderHorizontalSpacing",
+
+    "webkitBorderImage",
+
+    "webkitBorderRadius",
+
+    "webkitBorderStart",
+
+    "webkitBorderStartColor",
+
+    "webkitBorderStartStyle",
+
+    "webkitBorderStartWidth",
+
+    "webkitBorderTopLeftRadius",
+
+    "webkitBorderTopRightRadius",
+
+    "webkitBorderVerticalSpacing",
+
+    "webkitBoxAlign",
+
+    "webkitBoxDecorationBreak",
+
+    "webkitBoxDirection",
+
+    "webkitBoxFlex",
+
+    "webkitBoxOrdinalGroup",
+
+    "webkitBoxOrient",
+
+    "webkitBoxPack",
+
+    "webkitBoxReflect",
+
+    "webkitBoxShadow",
+
+    "webkitBoxSizing",
+
+    "webkitClipPath",
+
+    "webkitColumnBreakAfter",
+
+    "webkitColumnBreakBefore",
+
+    "webkitColumnBreakInside",
+
+    "webkitColumnCount",
+
+    "webkitColumnGap",
+
+    "webkitColumnRule",
+
+    "webkitColumnRuleColor",
+
+    "webkitColumnRuleStyle",
+
+    "webkitColumnRuleWidth",
+
+    "webkitColumnSpan",
+
+    "webkitColumnWidth",
+
+    "webkitColumns",
+
+    "webkitFilter",
+
+    "webkitFlex",
+
+    "webkitFlexBasis",
+
+    "webkitFlexDirection",
+
+    "webkitFlexFlow",
+
+    "webkitFlexGrow",
+
+    "webkitFlexShrink",
+
+    "webkitFlexWrap",
+
+    "webkitFontFeatureSettings",
+
+    "webkitFontSmoothing",
+
+    "webkitHyphenateCharacter",
+
+    "webkitJustifyContent",
+
+    "webkitLineBreak",
+
+    "webkitLineClamp",
+
+    "webkitLocale",
+
+    "webkitLogicalHeight",
+
+    "webkitLogicalWidth",
+
+    "webkitMarginAfter",
+
+    "webkitMarginBefore",
+
+    "webkitMarginEnd",
+
+    "webkitMarginStart",
+
+    "webkitMask",
+
+    "webkitMaskBoxImage",
+
+    "webkitMaskBoxImageOutset",
+
+    "webkitMaskBoxImageRepeat",
+
+    "webkitMaskBoxImageSlice",
+
+    "webkitMaskBoxImageSource",
+
+    "webkitMaskBoxImageWidth",
+
+    "webkitMaskClip",
+
+    "webkitMaskComposite",
+
+    "webkitMaskImage",
+
+    "webkitMaskOrigin",
+
+    "webkitMaskPosition",
+
+    "webkitMaskPositionX",
+
+    "webkitMaskPositionY",
+
+    "webkitMaskRepeat",
+
+    "webkitMaskRepeatX",
+
+    "webkitMaskRepeatY",
+
+    "webkitMaskSize",
+
+    "webkitMaxLogicalHeight",
+
+    "webkitMaxLogicalWidth",
+
+    "webkitMinLogicalHeight",
+
+    "webkitMinLogicalWidth",
+
+    "webkitOpacity",
+
+    "webkitOrder",
+
+    "webkitPaddingAfter",
+
+    "webkitPaddingBefore",
+
+    "webkitPaddingEnd",
+
+    "webkitPaddingStart",
+
+    "webkitPerspective",
+
+    "webkitPerspectiveOrigin",
+
+    "webkitPerspectiveOriginX",
+
+    "webkitPerspectiveOriginY",
+
+    "webkitPrintColorAdjust",
+
+    "webkitRtlOrdering",
+
+    "webkitRubyPosition",
+
+    "webkitShapeImageThreshold",
+
+    "webkitShapeMargin",
+
+    "webkitShapeOutside",
+
+    "webkitTapHighlightColor",
+
+    "webkitTextCombine",
+
+    "webkitTextDecorationsInEffect",
+
+    "webkitTextEmphasis",
+
+    "webkitTextEmphasisColor",
+
+    "webkitTextEmphasisPosition",
+
+    "webkitTextEmphasisStyle",
+
+    "webkitTextFillColor",
+
+    "webkitTextOrientation",
+
+    "webkitTextSecurity",
+
+    "webkitTextSizeAdjust",
+
+    "webkitTextStroke",
+
+    "webkitTextStrokeColor",
+
+    "webkitTextStrokeWidth",
+
+    "webkitTransform",
+
+    "webkitTransformOrigin",
+
+    "webkitTransformOriginX",
+
+    "webkitTransformOriginY",
+
+    "webkitTransformOriginZ",
+
+    "webkitTransformStyle",
+
+    "webkitTransition",
+
+    "webkitTransitionDelay",
+
+    "webkitTransitionDuration",
+
+    "webkitTransitionProperty",
+
+    "webkitTransitionTimingFunction",
+
+    "webkitUserDrag",
+
+    "webkitUserModify",
+
+    "webkitUserSelect",
+
+    "webkitWritingMode",
+
+    "whiteSpace",
+
+    "whiteSpaceCollapse",
+
+    "widows",
+
+    "width",
+
+    "willChange",
+
+    "wordBreak",
+
+    "wordSpacing",
+
+    "wordWrap",
+
+    "writingMode",
+
+    "x",
+
+    "y",
+
+    "zIndex",
+
+    "zoom",
   ];
 
   // Build the tree starting from the specified element with filtered styles
