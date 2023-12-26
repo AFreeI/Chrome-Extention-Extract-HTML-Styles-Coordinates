@@ -47,6 +47,10 @@ function getFilteredStyles(element, styleFilter) {
 
 // Cortex
 
+var startElement = document.querySelector(".link-btn.white.w-inline-block"); // https://i.imgur.com/X41kDyf.png
+
+// ---
+
 // var startElement = document.querySelector(".ft-contact-link"); // https://i.imgur.com/H6JPKZZ.png
 
 // var startElement = document.querySelector(".header-btn.white"); // https://i.imgur.com/XEkMCWo.png
@@ -71,9 +75,7 @@ function getFilteredStyles(element, styleFilter) {
 
 //var startElement = document.querySelector(".g-footer-list_item-link.cc-combo.w-inline-block"); // https://i.imgur.com/AyHngtV.png
 
-var startElement = document.querySelector(
-  ".s_content-w.is--enterprise .button.w-inline-block"
-); // https://i.imgur.com/X41kDyf.png
+//var startElement = document.querySelector(".s_content-w.is--enterprise .button.w-inline-block"); // https://i.imgur.com/X41kDyf.png
 
 // DigitalOcean
 
