@@ -63,6 +63,8 @@ var startElement = document.querySelector(".link-btn.white.w-inline-block"); // 
 
 //var startElement = document.querySelector(".header-btn.white"); // https://i.imgur.com/X41kDyf.png
 
+//var startElement = document.querySelector(".w-commerce-commercecartopenlink.cart.white.w-inline-block"); // https://i.imgur.com/w2yB0g5.png
+
 // Toolset.com
 
 //var startElement = document.querySelector(".tb-container-inner .tb-button__link"); // https://i.imgur.com/X41kDyf.png
