@@ -18,6 +18,14 @@ function buildTree(element, styleFilter, parent = null) {
     insideText: element.textContent.trim(),
     iAMText:
       element.childNodes.length === 1 && element.childNodes[0].nodeType === 3,
+    previousSibling:
+      element.previousSibling && element.previousSibling.nodeValue
+        ? element.previousSibling.nodeValue.trim()
+        : "",
+    nextSibling:
+      element.nextSibling && element.nextSibling.nodeValue
+        ? element.nextSibling.nodeValue.trim()
+        : "",
     children: [],
   };
 
@@ -47,47 +55,72 @@ function getFilteredStyles(element, styleFilter) {
 
 // Cortex
 
-var startElement = document.querySelector(".link-btn.white.w-inline-block"); // https://i.imgur.com/X41kDyf.png
+//var startElement = document.querySelector(".link-btn.white.w-inline-block"); // https://i.imgur.com/X41kDyf.png +
 
-// ---
+// var startElement = document.querySelector(".primary-btn.hero.w-inline-block"); // https://i.imgur.com/BOm5N38.png +
 
-// var startElement = document.querySelector(".ft-contact-link"); // https://i.imgur.com/H6JPKZZ.png
+// var startElement = document.querySelector(".ft-btn.w-inline-block"); // https://i.imgur.com/X41kDyf.png +
 
-// var startElement = document.querySelector(".header-btn.white"); // https://i.imgur.com/XEkMCWo.png
+// var startElement = document.querySelector(".ft-contact-link"); // https://i.imgur.com/H6JPKZZ.png +
 
-//var startElement = document.querySelector(".primary-btn.hero.w-inline-block"); // https://i.imgur.com/X41kDyf.png
+// var startElement = document.querySelector(".header-btn.white"); // https://i.imgur.com/XEkMCWo.png +
 
-//var startElement = document.querySelector(".ft-btn.w-inline-block"); // https://i.imgur.com/X41kDyf.png
-
-//var startElement = document.querySelector(".ft-contact-link"); // https://i.imgur.com/X41kDyf.png
-
-//var startElement = document.querySelector(".header-btn.white"); // https://i.imgur.com/X41kDyf.png
-
-//var startElement = document.querySelector(".w-commerce-commercecartopenlink.cart.white.w-inline-block"); // https://i.imgur.com/w2yB0g5.png
+// var startElement = document.querySelector(".w-commerce-commercecartopenlink.cart.white.w-inline-block"); // https://i.imgur.com/i2jtCXY.png +
 
 // Toolset.com
 
-//var startElement = document.querySelector(".tb-container-inner .tb-button__link"); // https://i.imgur.com/X41kDyf.png
+// var startElement = document.querySelector(".tb-container-inner .tb-button__link"); // https://i.imgur.com/F2fFFl1.png +
 
 // WebFlow
 
-//var startElement = document.querySelector(".button-large.cc-open-template.w-inline-block"); // https://i.imgur.com/X41kDyf.png
+// var startElement = document.querySelector(".button-large.cc-open-template.w-inline-block"); // https://i.imgur.com/3exGZN4.png +
 
-//var startElement = document.querySelector(".button.w-inline-block"); // https://i.imgur.com/X41kDyf.png
+// var startElement = document.querySelector(".button.w-inline-block"); // https://i.imgur.com/GGz1as3.png +
 
-//var startElement = document.querySelector(".g-footer-list_item-link.cc-combo.w-inline-block"); // https://i.imgur.com/AyHngtV.png
+// var startElement = document.querySelector(".g-footer-list_item-link.cc-combo.w-inline-block"); // https://i.imgur.com/B6K30Qx.png +
 
-//var startElement = document.querySelector(".s_content-w.is--enterprise .button.w-inline-block"); // https://i.imgur.com/X41kDyf.png
+// var startElement = document.querySelector(".s_content-w.is--enterprise .button.w-inline-block"); // https://i.imgur.com/4ZWQxfd.png +
 
 // DigitalOcean
 
-//var startElement = document.querySelector(".LazyLink___StyledA-sc-yi29t7-1.lcZGRo.SignupButtons___StyledLazyLink-sc-1j4c66p-0.bcRgSa"); // https://i.imgur.com/X41kDyf.png
+// var startElement = document.querySelector(".LazyLink___StyledA-sc-yi29t7-1.lcZGRo.SignupButtons___StyledLazyLink-sc-1j4c66p-0.bcRgSa"); // https://i.imgur.com/kBUbKzv.png +
 
-//var startElement = document.querySelector(".CardPricingstyles__StyledCardPricingContainer-sc-1c4kjfb-0.bcvcMA.pricing__StyledCardPricing-sc-6rgcvr-1.bnCyYu .LinkTextstyles-sc-jz3jcd-0.ftQMfF"); // https://i.imgur.com/X41kDyf.png
+// var startElement = document.querySelector(".CardPricingstyles__StyledCardPricingContainer-sc-1c4kjfb-0.bcvcMA.pricing__StyledCardPricing-sc-6rgcvr-1.bnCyYu .LinkTextstyles-sc-jz3jcd-0.ftQMfF"); // https://i.imgur.com/DCxvMYF.png
 
 // Shopify
 
-//var startElement = document.querySelector(".group.inline-block.w-full.text-white"); // https://i.imgur.com/u6Ewn4k.png
+// var startElement = document.querySelector(".group.inline-block.w-full.text-white"); // https://i.imgur.com/FVY6F8x.png +
+
+// Zaimania
+
+// var startElement = document.querySelector(".w-commerce-commercecartopenlink.cart-button.w-inline-block"); // https://i.imgur.com/B8f49kd.png // https://zaimania.webflow.io/home-pages/home-v1 +
+
+// var startElement = document.querySelector(".banner-v1-wrapper .primary-button.w-inline-block"); // https://i.imgur.com/FbaDwXR.png // https://zaimania.webflow.io/home-pages/home-v1 +
+
+// Contra
+
+// var startElement = document.querySelector(".framer-15xb5su.framer-1j9pppm"); // https://i.imgur.com/bQTiveo.png // https://contra.com/portfolios +
+
+// var startElement = document.querySelector(".c-imalmM"); // https://i.imgur.com/kdqeh3W.png // https://contra.com/portfolios +
+
+// var startElement = document.querySelector(".c-inMWFm.c-inMWFm-bYRpZE-size-md.c-inMWFm-iGzQvm-variant-outlineTag"); // https://i.imgur.com/vG3ifmz.png // https://contra.com/portfolios +
+
+// var startElement = document.querySelector(".c-fSjrHW.c-fSjrHW-dTgCPt-isActive-false"); // https://i.imgur.com/dtzi74y.png // https://contra.com/ +
+
+// var startElement = document.querySelector(".c-fDQBDF"); // https://i.imgur.com/LLgZFji.png // https://contra.com/ +
+
+// var startElement = document.querySelector(".c-eEjXFo"); // https://i.imgur.com/phgcQsd.png // https://contra.com/ +
+
+var startElement = document.querySelector(".c-jbeloR"); // https://i.imgur.com/11jEHY9.png // https://contra.com/ +
+
+//var startElement = document.querySelector(".c-cJEQik"); // https://i.imgur.com/qzh91b0.png // https://contra.com/ +
+
+// var startElement = document.querySelector(".c-inMWFm.c-inMWFm-bYRpZE-size-md.c-inMWFm-fNiefI-variant-outline"); // https://i.imgur.com/EOXLAZg.png // https://contra.com/ +
+
+////////
+////////
+////////
+////////
 
 ///////////////////////////////////////////////////////////
 // Button GROUP
