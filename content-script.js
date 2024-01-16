@@ -57,9 +57,9 @@ function getFilteredStyles(element, styleFilter) {
 
 //var startElement = document.querySelector(".link-btn.white.w-inline-block"); // https://i.imgur.com/X41kDyf.png +
 
-// var startElement = document.querySelector(".primary-btn.hero.w-inline-block"); // https://i.imgur.com/BOm5N38.png +
+//var startElement = document.querySelector(".primary-btn.hero.w-inline-block"); // https://i.imgur.com/BOm5N38.png +
 
-// var startElement = document.querySelector(".ft-btn.w-inline-block"); // https://i.imgur.com/X41kDyf.png +
+//var startElement = document.querySelector(".ft-btn.w-inline-block"); // https://i.imgur.com/X41kDyf.png +
 
 // var startElement = document.querySelector(".ft-contact-link"); // https://i.imgur.com/H6JPKZZ.png +
 
@@ -83,9 +83,9 @@ function getFilteredStyles(element, styleFilter) {
 
 // DigitalOcean
 
-// var startElement = document.querySelector(".LazyLink___StyledA-sc-yi29t7-1.lcZGRo.SignupButtons___StyledLazyLink-sc-1j4c66p-0.bcRgSa"); // https://i.imgur.com/kBUbKzv.png +
+ // var startElement = document.querySelector(".LazyLink___StyledA-sc-yi29t7-1.cjtx.SignupButtons___StyledLazyLink-sc-1j4c66p-0.fBroQX"); // https://i.imgur.com/kBUbKzv.png +
 
-// var startElement = document.querySelector(".CardPricingstyles__StyledCardPricingContainer-sc-1c4kjfb-0.bcvcMA.pricing__StyledCardPricing-sc-6rgcvr-1.bnCyYu .LinkTextstyles-sc-jz3jcd-0.ftQMfF"); // https://i.imgur.com/DCxvMYF.png
+ // var startElement = document.querySelector(".CardPricingstyles__StyledMainContent-sc-1c4kjfb-2 .LinkTextstyles-sc-jz3jcd-0.eIuOhE"); // https://i.imgur.com/DCxvMYF.png
 
 // Shopify
 
@@ -111,11 +111,11 @@ function getFilteredStyles(element, styleFilter) {
 
 // var startElement = document.querySelector(".c-eEjXFo"); // https://i.imgur.com/phgcQsd.png // https://contra.com/ +
 
-var startElement = document.querySelector(".c-jbeloR"); // https://i.imgur.com/11jEHY9.png // https://contra.com/ +
+// var startElement = document.querySelector(".c-jbeloR"); // https://i.imgur.com/11jEHY9.png // https://contra.com/ +
 
 //var startElement = document.querySelector(".c-cJEQik"); // https://i.imgur.com/qzh91b0.png // https://contra.com/ +
 
-// var startElement = document.querySelector(".c-inMWFm.c-inMWFm-bYRpZE-size-md.c-inMWFm-fNiefI-variant-outline"); // https://i.imgur.com/EOXLAZg.png // https://contra.com/ +
+ var startElement = document.querySelector(".c-inMWFm.c-inMWFm-bYRpZE-size-md.c-inMWFm-fNiefI-variant-outline"); // https://i.imgur.com/EOXLAZg.png // https://contra.com/ +
 
 ////////
 ////////
