@@ -20,11 +20,11 @@ function buildTree(element, styleFilter, parent = null) {
       element.childNodes.length === 1 && element.childNodes[0].nodeType === 3,
     previousSibling:
       element.previousSibling && element.previousSibling.nodeValue
-        ? element.previousSibling.nodeValue.trim()
+        ? element.previousSibling.nodeValue
         : "",
     nextSibling:
       element.nextSibling && element.nextSibling.nodeValue
-        ? element.nextSibling.nodeValue.trim()
+        ? element.nextSibling.nodeValue
         : "",
     children: [],
   };
@@ -75,7 +75,7 @@ function getFilteredStyles(element, styleFilter) {
 
 // var startElement = document.querySelector(".button-large.cc-open-template.w-inline-block"); // https://i.imgur.com/3exGZN4.png +
 
-// var startElement = document.querySelector(".button.w-inline-block"); // https://i.imgur.com/GGz1as3.png +
+//var startElement = document.querySelector(".s_content-w.is--features .button.w-inline-block"); // https://i.imgur.com/GGz1as3.png +
 
 // var startElement = document.querySelector(".g-footer-list_item-link.cc-combo.w-inline-block"); // https://i.imgur.com/B6K30Qx.png +
 
@@ -83,9 +83,9 @@ function getFilteredStyles(element, styleFilter) {
 
 // DigitalOcean
 
- // var startElement = document.querySelector(".LazyLink___StyledA-sc-yi29t7-1.cjtx.SignupButtons___StyledLazyLink-sc-1j4c66p-0.fBroQX"); // https://i.imgur.com/kBUbKzv.png +
+// var startElement = document.querySelector(".LazyLink___StyledA-sc-yi29t7-1.cjtx.SignupButtons___StyledLazyLink-sc-1j4c66p-0.fBroQX"); // https://i.imgur.com/kBUbKzv.png +
 
- // var startElement = document.querySelector(".CardPricingstyles__StyledMainContent-sc-1c4kjfb-2 .LinkTextstyles-sc-jz3jcd-0.eIuOhE"); // https://i.imgur.com/DCxvMYF.png
+// var startElement = document.querySelector(".CardPricingstyles__StyledMainContent-sc-1c4kjfb-2 .LinkTextstyles-sc-jz3jcd-0.eIuOhE"); // https://i.imgur.com/DCxvMYF.png
 
 // Shopify
 
@@ -111,11 +111,19 @@ function getFilteredStyles(element, styleFilter) {
 
 // var startElement = document.querySelector(".c-eEjXFo"); // https://i.imgur.com/phgcQsd.png // https://contra.com/ +
 
-// var startElement = document.querySelector(".c-jbeloR"); // https://i.imgur.com/11jEHY9.png // https://contra.com/ +
+//var startElement = document.querySelector(".c-jbeloR"); // https://i.imgur.com/11jEHY9.png // https://contra.com/ +
 
-//var startElement = document.querySelector(".c-cJEQik"); // https://i.imgur.com/qzh91b0.png // https://contra.com/ +
+// var startElement = document.querySelector(".c-cJEQik"); // https://i.imgur.com/qzh91b0.png // https://contra.com/ +
 
- var startElement = document.querySelector(".c-inMWFm.c-inMWFm-bYRpZE-size-md.c-inMWFm-fNiefI-variant-outline"); // https://i.imgur.com/EOXLAZg.png // https://contra.com/ +
+// var startElement = document.querySelector(".c-bjMlcL .c-inMWFm.c-inMWFm-bYRpZE-size-md.c-inMWFm-fNiefI-variant-outline"); // https://i.imgur.com/EOXLAZg.png // https://contra.com/ +
+
+//  var startElement = document.querySelector(".c-dTBgFR"); // https://i.imgur.com/R5s5rh0.png // https://contra.com/ +
+
+// Framer
+
+// var startElement = document.querySelector(".framer-1nt310z"); // https://i.imgur.com/3fS5KMb.png
+
+var startElement = document.querySelector(".framer-1gfex27.framer-1tw762q"); // https://i.imgur.com/knmnuDi.png
 
 ////////
 ////////
