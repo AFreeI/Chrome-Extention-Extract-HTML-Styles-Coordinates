@@ -123,7 +123,25 @@ function getFilteredStyles(element, styleFilter) {
 
 // var startElement = document.querySelector(".framer-1nt310z"); // https://i.imgur.com/3fS5KMb.png
 
-var startElement = document.querySelector(".framer-1gfex27.framer-1tw762q"); // https://i.imgur.com/knmnuDi.png
+// var startElement = document.querySelector(".framer-1gfex27.framer-1tw762q"); // https://i.imgur.com/knmnuDi.png
+
+// Finestwp
+
+// var startElement = document.querySelector(".elementor-element-3b0c801"); // https://i.imgur.com/4KcWvcn.png
+
+// var startElement = document.querySelector(".elementor-element-8c3d711"); // https://i.imgur.com/4KcWvcn.png
+
+// var startElement = document.querySelector(".elementor-element-de890ca"); // https://i.imgur.com/JShGaGm.png // 2 texte din coloana
+
+// var startElement = document.querySelector(".wpb-content-wrapper"); // https://i.imgur.com/3oSno0V.png // https://savoy.nordicmade.com/about/
+
+// var startElement = document.querySelector(".nm-row.nm-row-full.vc_row.wpb_row.vc_custom_1430762920072"); // https://i.imgur.com/3oSno0V.png // https://savoy.nordicmade.com/contact/
+
+// var startElement = document.querySelector(".nm-page-default.nm-row"); // https://i.imgur.com/3oSno0V.png // https://savoy.nordicmade.com/faq/
+
+// var startElement = document.querySelector(".nm-portfolio-single"); // https://i.imgur.com/3oSno0V.png // https://savoy.nordicmade.com/portfolio/wall-rack/
+
+var startElement = document.querySelector("#nm-shop"); // https://i.imgur.com/3oSno0V.png // https://savoy.nordicmade.com/portfolio/wall-rack/
 
 ////////
 ////////
